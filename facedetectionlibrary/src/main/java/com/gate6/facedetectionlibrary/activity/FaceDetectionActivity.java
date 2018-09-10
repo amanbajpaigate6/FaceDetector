@@ -246,7 +246,7 @@ public class FaceDetectionActivity extends AppCompatActivity implements NetworkL
     public void onCompleteResponse(int RequestTypee, AppBeanData data) {
         if (RequestTypee == RequestType.LOGIN_REQUEST) {
             imageModel = (ImageUploadModel) data;
-            handler.post(updateRunnableUpload);
+            handler.post(updateRunnableLogin);
         } else if (RequestTypee == RequestType.LOGOUT_REQUEST) {
             imageModel = (ImageUploadModel) data;
             handler.post(updateRunnableLogout);
@@ -267,9 +267,9 @@ public class FaceDetectionActivity extends AppCompatActivity implements NetworkL
                     if (!isLogin) {
                         if (imageModel.getData() != null && !TextUtils.isEmpty(imageModel.getData().getName())) {
                             if (!imageModel.getData().getName().equalsIgnoreCase("Unknown")) {
-                                if (!TextUtils.isEmpty(imageModel.getMessage())) {
+                                /*if (!TextUtils.isEmpty(imageModel.getMessage())) {
                                     Utils.getInstance().showToast(mContext, imageModel.getMessage());
-                                }
+                                }*/
                                 isLogin = true;
                                 startDashBoardActivity();
                                 FaceDetectorWrapper.getInstance().stopAllTimers();
@@ -292,7 +292,7 @@ public class FaceDetectionActivity extends AppCompatActivity implements NetworkL
     };
 
 
-    final Runnable updateRunnableUpload = new Runnable() {
+    final Runnable updateRunnableLogin = new Runnable() {
         public void run() {
             // call the activity method that updates the UI
             if (imageModel != null) {
@@ -302,10 +302,7 @@ public class FaceDetectionActivity extends AppCompatActivity implements NetworkL
                             if (!imageModel.getData().getName().equalsIgnoreCase("Unknown")) {
                                 if (!TextUtils.isEmpty(imageModel.getData().getFirstname()) && !TextUtils.isEmpty(imageModel.getData().getLastname())) {
                                     isLogin = true;
-                                    Intent returnIntent = new Intent();
-                                    returnIntent.putExtra("DATA_MODEL", imageModel);
-                                    setResult(Activity.RESULT_OK, returnIntent);
-                                    finish();
+                                    startDashBoardActivity();
 //                                    speakOut("Welcome " + imageModel.getData().getFirstname() + " " + imageModel.getData().getLastname());
 //                                    showAlertDialog("Welcome " + imageModel.getData().getFirstname() + " " + imageModel.getData().getLastname());
                                     FaceDetectorWrapper.getInstance().stopAllTimers();
@@ -349,9 +346,11 @@ public class FaceDetectionActivity extends AppCompatActivity implements NetworkL
 
 
     private void startDashBoardActivity() {
-//        Intent intent = new Intent(this, SplashActivity.class);
-//        startActivity(intent);
-//        finish();
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("DATA_MODEL", imageModel);
+        setResult(Activity.RESULT_OK, returnIntent);
+        finish();
+
 
     }
 

@@ -1,4 +1,8 @@
 apply plugin: 'com.android.library'
+// Required plugin in library module
+apply plugin: 'com.github.dcendents.android-maven'
+// Replace nisrulz with <your_github_username>
+group='com.github.amanbajpaigate6'
 
 
 ext {
@@ -11,13 +15,13 @@ ext {
 
     libraryDescription = 'A Library for login with face detection.'
 
-    siteUrl = 'https://github.com/gate6/g6irishapp/tree/androidsdk'
-    gitUrl = 'https://github.com/gate6/g6irishapp.git'
+    siteUrl = 'https://github.com/amanbajpaigate6/FaceDetector'
+    gitUrl = 'https://github.com/amanbajpaigate6/FaceDetector.git'
 
-    libraryVersion = '1.1'
+    libraryVersion = '1.2'
 
     developerId = 'amanbajpaigate6'
-    developerName = 'gate6'
+    developerName = 'amanbajpaigate6'
     developerEmail = 'aman.bajpai@gate6.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
@@ -34,7 +38,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "1.2"
 
 //        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
