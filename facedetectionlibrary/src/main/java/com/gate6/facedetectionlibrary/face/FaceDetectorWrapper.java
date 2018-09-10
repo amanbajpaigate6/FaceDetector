@@ -60,10 +60,10 @@ public class FaceDetectorWrapper implements FaceDetectorCallback {
     private int DETECTING_TIMER = 5 * 1000;
     private int SPEAKING_OUT_TIMER = 10 * 1000;
     public String frameColor = "#0000FF";
-    public boolean isFrameShowing;
+    public boolean isFrameShowing=true;
     public String frameLabel = "DETECTING";
-    public boolean isFrameLabelShowing;
-    public boolean isVoiceNeeded;
+    public boolean isFrameLabelShowing=true;
+    public boolean isVoiceNeeded=true;
 
     public static FaceDetectorWrapper getInstance() {
         if (instance == null) {

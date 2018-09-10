@@ -123,7 +123,7 @@ public class SignupActivity extends AppCompatActivity implements AdapterView.OnI
 
     @Override
     public void onClick(View v) {
-       /* switch (v.getId()) {
+        /*switch (v.getId()) {
             case R.id.signup_button:
                 signUpClick();
                 break;

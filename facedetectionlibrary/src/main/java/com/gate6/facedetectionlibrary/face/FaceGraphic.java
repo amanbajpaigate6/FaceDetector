@@ -58,8 +58,8 @@ public class FaceGraphic extends GraphicOverlay.Graphic {
     private Context mContext;
     private String face_name;
     private FaceDetectorCallback listner;
-    private boolean isShowDetecting;
-    public boolean isFrameShowing;
+    private boolean isShowDetecting=true;
+    public boolean isFrameShowing=true;
     public String frameLabel = "Detecting";
 
     public FaceGraphic(GraphicOverlay overlay, Context mContext, boolean isShowDetecting, FaceDetectorCallback listner, String frameColor, String frameLabel,

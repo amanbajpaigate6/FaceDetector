@@ -42,7 +42,7 @@ public class SplashActivity extends AppCompatActivity {
         mContext = this;
         userImage=(ImageView)findViewById(R.id.userImage);
         userImage.setVisibility(View.GONE);
-        setConfigData();
+//        setConfigData();
 
         findViewById(R.id.signin_button).setOnClickListener(new View.OnClickListener() {
             @Override
