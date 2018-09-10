@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:paddingBottom="30dp">
+
+            <RelativeLayout
+                android:id="@+id/userImageLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="30dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/user" />
+
+                <ImageView
+                    android:id="@+id/takePhoto"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/userImage"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_camera_50" />
+
+            </RelativeLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/firstNameTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userImageLayout"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@android:color/darker_gray">
+
+                <EditText
+                    android:id="@+id/firstNameEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ff4b14"
+                    android:hint="@string/first_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lines="1"
+
+                    android:textColor="@color/black" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lastNameTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstNameTextInput"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:textColorHint="@android:color/darker_gray">
+
+                <EditText
+                    android:id="@+id/lastNameEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ff4b14"
+                    android:hint="@string/last_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/black" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/emailTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lastNameTextInput"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:textColorHint="@android:color/darker_gray">
+
+                <EditText
+                    android:id="@+id/emailEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ff4b14"
+                    android:hint="@string/email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+
+                    android:textColor="@color/black" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phoneTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailTextInput"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:textColorHint="@android:color/darker_gray">
+
+                <EditText
+                    android:id="@+id/phoneEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ff4b14"
+                    android:hint="@string/phone_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:textColor="@color/black" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/selectRoles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneTextInput"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/selectRoles"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shape_rectangle"
+                android:text="@string/signup"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </FrameLayout>
+</RelativeLayout>

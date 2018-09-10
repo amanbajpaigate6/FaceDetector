@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="no_location_permission">This application cannot run because it does not have the location permission.  The application will now exit.</string>
+    <string name="no_write_permission">This application cannot run because it does not have the read/write storage permission.  The application will now exit.</string>
+
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="face_detector">Face Detector</string>
+    <string name="signup">SignUp</string>
+    <string name="logout">Logout</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="email">Email</string>
+    <string name="please_enter_email">Please enter email</string>
+    <string name="please_enter_valid_email">Please enter valid email</string>
+    <string name="please_enter_first_name">Plase enter first name</string>
+    <string name="please_enter_last_name">Please enter last name</string>
+    <string name="select_roles">Please select roles</string>
+    <string name="select_image">Please select image</string>
+    <string name="signin">SignIn</string>
+    <string name="unable_to_detect">Unable to detect face, Please try again</string>
+    <string name="come_closer">please come closer</string>
+    <string name="detecting_you">Please wait it is detecting you</string>
+    <string name="alert_need_internet_connection">An Internet connection is required to use this app. Please check your Internet settings and try again.</string>
+    <string name="time_out_error">The request timed out.</string>
+    <string name="common_error_message">Your request can\'t be completed, please try again.</string>
+    <string name="no_network_connection">No internet connection found</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="please_enter_phone_number">Please enter phone number</string>
+    <string name="verify">Verify</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="please_enter_verification_code">Please enter verification code.</string>
+    <string name="questions">Questions</string>
+    <string name="question1">▪ Did you have a one on one Therapy Session?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="question2">▪ Did you have group therapy?</string>
+    <string name="question3">▪ Did you have toxicology done?</string>
+    <string name="question4">▪ Were you prescribed any of the following today? (list of drugs displayed)</string>
+    <string name="submit">Submit</string>
+    <string name="ques1_error">Please answer did you have one on one therapy session?</string>
+    <string name="ques2_error">Please answer did you have group therapy?</string>
+    <string name="ques3_error">Please answer did you have toxicology done?</string>
+    <string name="upload_image">PICK IMAGE</string>
+</resources>

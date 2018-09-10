@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/header"></include>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.gate6.facedetectionlibrary.ui.camera.CameraSourcePreview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.gate6.facedetectionlibrary.ui.camera.GraphicOverlay
+                android:id="@+id/faceOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.gate6.facedetectionlibrary.ui.camera.CameraSourcePreview>
+
+
+        <ImageView
+            android:id="@+id/takePhoto"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:src="@drawable/icon_camera" />
+
+    </FrameLayout>
+</LinearLayout>
+

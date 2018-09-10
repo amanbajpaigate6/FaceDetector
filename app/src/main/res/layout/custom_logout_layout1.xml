@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_white_bg">
+
+
+    <TextView
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="LOGOUT !"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:id="@+id/alertll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header1"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:id="@+id/alert_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="are you sure to logout ?"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alertll"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle"
+            android:text="Ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_title_indicator_text_size" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:background="@drawable/shape_rectangle"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_title_indicator_text_size" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
